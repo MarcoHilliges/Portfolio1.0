@@ -1,1 +1,63 @@
 /* You can add global styles to this file, and also import other style files */
+html{
+    scroll-behavior: smooth;
+    font-size: 19px;
+}
+
+body{
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    // font-family: 'Roboto', sans-serif;
+    background-color: black;
+    color: white;
+
+}
+
+.container-width{
+    width: 1680px;
+    max-width: 100vw;
+}
+
+.flex{
+    display: flex;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.center-horizontal{
+    display: flex;
+    justify-content: center;
+}
+
+.column{
+    flex-direction: column;
+}
+
+.wrap{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+h1{
+    font-size: 64px;
+}
+
+h2{
+    font-size: 36px;
+    font-weight: 500;
+}
+
+h3{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+h4{
+    font-size: 18px;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

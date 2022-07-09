@@ -1,0 +1,39 @@
+section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 120px;
+    height: calc(100vh - 120px);
+
+    img{
+        height: 500px;
+        width: 500px;
+        object-fit: cover;
+        background-color: #fa2759;
+        border-radius: 50%;
+    }
+}
+
+.first-name{
+    display: inline;
+    color: #fa2759;
+}
+
+.contact-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 78px;
+    border: 2px solid #2dfcd8;
+    color: #2dfcd8;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 225ms ease-in-out;
+
+    &:hover{
+        color: white;
+        background-color: #2dfcd8;
+        
+    }
+}

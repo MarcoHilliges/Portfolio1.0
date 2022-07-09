@@ -1,0 +1,22 @@
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 40px;
+
+    nav{
+        display: flex;
+        justify-content: flex-end;
+
+        a{
+            margin-left: 40px;
+            color: white;
+            text-decoration: none;
+    
+            &:hover{
+                color: red;
+            }
+        }
+    }
+}

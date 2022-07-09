@@ -1,0 +1,47 @@
+section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+    height: calc(100vh - 120px);
+
+}
+
+.project-box{
+    position: relative;
+    height: 370px;
+    width: 450px;
+    margin: 25px;
+    background-color: gray;
+    border-radius: 20px;
+    
+
+    &:hover{
+        .project-box-overlay{
+            visibility: visible;
+        } 
+    }
+
+    .project-box-overlay{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(255, 255, 255, 0.9);
+        height: 100%;
+        border-radius: 20px;
+        transition: all 0.225s ease-in-out;
+        visibility: hidden;
+
+        h3{
+            color: #fa2759;
+        }
+
+        .project-play-button{
+            width: 128px;
+            height: 60px;
+            color: #FB426E;
+            border: 1px solid #FB426E;
+            background-color: white;
+        }
+    }
+}
+
