@@ -9,63 +9,68 @@
               (submit)="sendMessage()"
               id="test">
 
-          <div class="label-container inactive"
+          <div class="inactive"
                inViewport
                [inViewportOptions]="{ threshold: [0] }"
                (inViewportAction)="onIntersection($event)">
-            <label for="name">Name:</label>
-            <ng-container *ngIf="contactFormFB.controls['name'].dirty || contactFormFB.controls['name'].touched">
+            <div class="label-container">
+              <label for="name">Name:</label>
+              <ng-container *ngIf="contactFormFB.controls['name'].dirty || contactFormFB.controls['name'].touched">
 
-              <p class="error" *ngIf="contactFormFB.controls['name'].errors?.['required']">Please enter your name</p>
-  
-              <p class="error" *ngIf="contactFormFB.controls['name'].errors?.['minlength']">min Length 5</p>
-              
-              <!-- <p>{{contactFormFB.controls['name'].errors | json}}</p> -->
-  
-            </ng-container>
-          
+                <p class="error" *ngIf="contactFormFB.controls['name'].errors?.['required']">Please enter your name</p>
+    
+                <p class="error" *ngIf="contactFormFB.controls['name'].errors?.['minlength']">min Length 5</p>
+                
+                <!-- <p>{{contactFormFB.controls['name'].errors | json}}</p> -->
+    
+              </ng-container>          
+            </div>
+
+            <input formControlName="name" name="name" type="text" placeholder=" Enter your name" required>
           </div>
-          <input formControlName="name" name="name" type="text" placeholder=" Enter your name" required>
-          
-          <div class="label-container inactive"
+
+          <div class="inactive"
                inViewport
                [inViewportOptions]="{ threshold: [0] }"
                (inViewportAction)="onIntersection($event)">
-            <label for="eMailAddress">E-Mail address:</label>
+            <div class="label-container">
+              <label for="eMailAddress">E-Mail address:</label>
 
-            <ng-container *ngIf="contactFormFB.controls['emailAddress'].dirty || contactFormFB.controls['emailAddress'].touched">
+              <ng-container *ngIf="contactFormFB.controls['emailAddress'].dirty || contactFormFB.controls['emailAddress'].touched">
 
-              <p class="error" *ngIf="contactFormFB.controls['emailAddress'].errors?.['required']">Please enter your E-mail Address</p>
-  
-              <p class="error" *ngIf="contactFormFB.controls['emailAddress'].errors?.['minlength']">min Length 5</p>
-              
-              <!-- <p>{{contactFormFB.controls['emailAddress'].errors | json}}</p> -->
-  
-            </ng-container>
+                <p class="error" *ngIf="contactFormFB.controls['emailAddress'].errors?.['required']">Please enter your E-mail Address</p>
+    
+                <p class="error" *ngIf="contactFormFB.controls['emailAddress'].errors?.['minlength']">min Length 5</p>
+                
+                <!-- <p>{{contactFormFB.controls['emailAddress'].errors | json}}</p> -->
+    
+              </ng-container>
+            </div>
+            
+            <input formControlName="emailAddress" name="eMailAddress" type="email" placeholder=" Enter your E-Mail address" required>
           </div>
           
-          <input formControlName="emailAddress" name="eMailAddress" type="email" placeholder=" Enter your E-Mail address" required>
-
-          
-          <div class="label-container inactive"
+          <div class="inactive"
                inViewport
                [inViewportOptions]="{ threshold: [0] }"
                (inViewportAction)="onIntersection($event)">
-            <label for="message">Message:</label>
-            <ng-container *ngIf="contactFormFB.controls['message'].dirty || contactFormFB.controls['message'].touched">
+            <div class="label-container">
+              <label for="message">Message:</label>
+              <ng-container *ngIf="contactFormFB.controls['message'].dirty || contactFormFB.controls['message'].touched">
 
-              <p class="error" *ngIf="contactFormFB.controls['message'].errors?.['required']">Please enter a message</p>
-  
-              <p class="error" *ngIf="contactFormFB.controls['message'].errors?.['minlength']">min Length 5</p>
-              
-              <!-- <p>{{contactFormFB.controls['emailAddress'].errors | json}}</p> -->
-  
-            </ng-container>
+                <p class="error" *ngIf="contactFormFB.controls['message'].errors?.['required']">Please enter a message</p>
+    
+                <p class="error" *ngIf="contactFormFB.controls['message'].errors?.['minlength']">min Length 5</p>
+                
+                <!-- <p>{{contactFormFB.controls['emailAddress'].errors | json}}</p> -->
+    
+              </ng-container>
+            </div>
+            
+            <!-- <input formControlName="message" name="message" type="text" placeholder="Enter your message" required> -->
+            <textarea formControlName="message" name="message" id="" cols="30" rows="10" type="text" placeholder="Enter your message" required></textarea>
           </div>
-          
-          <!-- <input formControlName="message" name="message" type="text" placeholder="Enter your message" required> -->
-          <textarea formControlName="message" name="message" id="" cols="30" rows="10" type="text" placeholder="Enter your message" required></textarea>
-          
+
           <div class="form-button inactive"
                inViewport
                [inViewportOptions]="{ threshold: [0] }"

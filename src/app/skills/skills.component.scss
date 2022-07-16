@@ -28,10 +28,27 @@ section {
     font-weight: 400;
     border-radius: 6px;
     background-color: #FFFFFF;
-    transition: all 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
 
     &:hover{
         transform: scale(1.1);
+    }
+
+    &.inactive{
+        transform: scale(0.1);
+    }
+
+    &.active{
+       animation: skills-scale 0.5s linear;
+    }
+
+    @keyframes skills-scale {
+        0% {
+            transform: scale(0.1);
+        }
+        100%{
+            transform: scale(1);
+        }
     }
 }
 

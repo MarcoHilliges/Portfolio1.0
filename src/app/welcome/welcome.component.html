@@ -14,12 +14,18 @@
                 Hilliges <br>
                 Front End developer
             </h1>
-            <a href="#contact" class="contact-button">
+            <a href="#contact" class="contact-button inactive"
+                inViewport
+                [inViewportOptions]="{ threshold: [0] }"
+                (inViewportAction)="onIntersection($event)">
                 <p>Contact me</p> 
             </a>
         </div>
         <div class="img-container">
-            <img src="assets/img/Marco.png" alt="">
+            <img class="inactive" src="assets/img/Marco.png" alt=""
+                 inViewport
+                 [inViewportOptions]="{ threshold: [0] }"
+                 (inViewportAction)="onIntersection($event)">
         </div>
     
     

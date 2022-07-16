@@ -4,6 +4,7 @@ section {
     align-items: center;
     padding-bottom: 120px;
     height: calc(100vh - 120px);
+    overflow: hidden;
 
     img{
         height: 500px;
@@ -12,12 +13,34 @@ section {
         object-position: 60% 30%;
         background-color: #fa2759;
         border-radius: 50%;
+
+        transition: all 1.5s ease-in-out 1s;
+
+        &.inactive{
+            background-color: transparent;
+            transform: scale(0.1);
+            opacity: 0;
+        }
+    
+        &.active{
+            
+        }
     }
 }
 
 .first-name{
     display: inline;
     color: #fa2759;
+
+    transition: all 4s ease-in-out;
+
+    &.inactive{
+        color: transparent;
+    }
+
+    &.active{
+       
+    }
 }
 
 .contact-button{
@@ -29,12 +52,21 @@ section {
     border: 2px solid #2dfcd8;
     color: #2dfcd8;
     font-weight: bold;
+    text-decoration: none;
     cursor: pointer;
-    transition: all 225ms ease-in-out;
+    transition: all 225ms ease-in-out, 
+                opacity 1.5s ease-in-out 3s;
 
     &:hover{
         color: white;
         background-color: #2dfcd8;
         
+    }
+
+    &.inactive{
+        opacity: 0;
+    }
+
+    &.active{
     }
 }
