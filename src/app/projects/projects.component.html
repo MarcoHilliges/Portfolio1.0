@@ -15,7 +15,10 @@
         </div>
 
         <div class="center wrap">
-            <div class="project-box">
+            <div class="project-box inactive"
+                 inViewport
+                 [inViewportOptions]="{ threshold: [0] }"
+                 (inViewportAction)="onIntersection($event)">
                 <div class="project-box-overlay center column">
                     <h3>El Pollo Loco</h3>
                     <p>JavaScript - based jump and run game</p>
@@ -23,7 +26,10 @@
                 </div>
             </div>
 
-            <div class="project-box">
+            <div class="project-box inactive"
+                 inViewport
+                 [inViewportOptions]="{ threshold: [0] }"
+                 (inViewportAction)="onIntersection($event)">
                 <div class="project-box-overlay center column">
                     <h3>Pokedex</h3>
                     <p>JavaScript - based jump and run game</p>
@@ -31,7 +37,10 @@
                 </div>
             </div>
 
-            <div class="project-box">
+            <div class="project-box inactive"
+                 inViewport
+                 [inViewportOptions]="{ threshold: [0] }"
+                 (inViewportAction)="onIntersection($event)">
                 <div class="project-box-overlay center column">
                     <h3>Join-Kanban-board</h3>
                     <p>JavaScript - based jump and run game</p>
@@ -39,7 +48,10 @@
                 </div>
             </div>
 
-            <div class="project-box">
+            <div class="project-box inactive"
+                 inViewport
+                 [inViewportOptions]="{ threshold: [0] }"
+                 (inViewportAction)="onIntersection($event)">
                 <div class="project-box-overlay center column">
                     <h3>Sharki</h3>
                     <p>JavaScript - based jump and run game</p>

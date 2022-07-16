@@ -4,7 +4,14 @@
         <div>
             <h1>
                 Hi,<br>
-                I'm <span class="first-name">Marco</span> Hilliges <br>
+                I'm 
+                <span class="first-name inactive"
+                      inViewport
+                      [inViewportOptions]="{ threshold: [0] }"
+                      (inViewportAction)="onIntersection($event)">
+                    Marco
+                </span> 
+                Hilliges <br>
                 Front End developer
             </h1>
             <a href="#contact" class="contact-button">

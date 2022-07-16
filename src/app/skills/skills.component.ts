@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Renderer2 } from '@angular/core';
 
 @Component({
   selector: 'app-skills',
@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SkillsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private renderer: Renderer2) { }
 
   ngOnInit(): void {
+  }
+
+  public onIntersection({ target, visible }: { target: Element; visible: boolean }): void {
+    this.renderer.addClass(target, visible ? 'active' : 'inactive');
+    this.renderer.removeClass(target, visible ? 'inactive' : 'active');
   }
 
 }

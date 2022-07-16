@@ -9,7 +9,10 @@
               (submit)="sendMessage()"
               id="test">
 
-          <div class="label-container">
+          <div class="label-container inactive"
+               inViewport
+               [inViewportOptions]="{ threshold: [0] }"
+               (inViewportAction)="onIntersection($event)">
             <label for="name">Name:</label>
             <ng-container *ngIf="contactFormFB.controls['name'].dirty || contactFormFB.controls['name'].touched">
 
@@ -24,7 +27,10 @@
           </div>
           <input formControlName="name" name="name" type="text" placeholder=" Enter your name" required>
           
-          <div class="label-container">
+          <div class="label-container inactive"
+               inViewport
+               [inViewportOptions]="{ threshold: [0] }"
+               (inViewportAction)="onIntersection($event)">
             <label for="eMailAddress">E-Mail address:</label>
 
             <ng-container *ngIf="contactFormFB.controls['emailAddress'].dirty || contactFormFB.controls['emailAddress'].touched">
@@ -41,7 +47,10 @@
           <input formControlName="emailAddress" name="eMailAddress" type="email" placeholder=" Enter your E-Mail address" required>
 
           
-          <div class="label-container">
+          <div class="label-container inactive"
+               inViewport
+               [inViewportOptions]="{ threshold: [0] }"
+               (inViewportAction)="onIntersection($event)">
             <label for="message">Message:</label>
             <ng-container *ngIf="contactFormFB.controls['message'].dirty || contactFormFB.controls['message'].touched">
 
@@ -57,7 +66,10 @@
           <!-- <input formControlName="message" name="message" type="text" placeholder="Enter your message" required> -->
           <textarea formControlName="message" name="message" id="" cols="30" rows="10" type="text" placeholder="Enter your message" required></textarea>
           
-          <div class="form-button">
+          <div class="form-button inactive"
+               inViewport
+               [inViewportOptions]="{ threshold: [0] }"
+               (inViewportAction)="onIntersection($event)">
             <button [disabled]="!(contactFormFB.valid  && (contactFormFB.dirty || contactFormFB.touched))" type="submit">Send</button>
           </div>
           

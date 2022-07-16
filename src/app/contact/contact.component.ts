@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Renderer2 } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
@@ -10,7 +10,7 @@ export class ContactComponent implements OnInit {
 
   public contactFormFB : FormGroup;
 
-  constructor(private _fb: FormBuilder) { 
+  constructor(private _fb: FormBuilder, private renderer: Renderer2) { 
     this.contactFormFB = this._fb.group({
       name: ['', [
         Validators.required,
@@ -38,4 +38,8 @@ export class ContactComponent implements OnInit {
     alert('Nachricht')
   }
 
+  public onIntersection({ target, visible }: { target: Element; visible: boolean }): void {
+    this.renderer.addClass(target, visible ? 'active' : 'inactive');
+    this.renderer.removeClass(target, visible ? 'inactive' : 'active');
+  }
 }
