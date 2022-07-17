@@ -91,21 +91,21 @@ form {
     }
 }
 
-.input-name{
+.input-name, .input-eMail, .input-message, .form-button{
     &.inactive{
         opacity: 0;;
     }
 
     &.active{
-       animation: contact-animation1 2.0s ease-in;
+       animation: contact-animation1 1.5s ease-in;
     }
+}
 
-    @keyframes contact-animation1 {
-        0% {
-            opacity: 0;
-        }
-        100%{
-            opacity: 1;
-        }
+@keyframes contact-animation1 {
+    0% {
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
     }
 }
