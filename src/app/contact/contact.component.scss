@@ -90,3 +90,22 @@ form {
         }
     }
 }
+
+.input-name{
+    &.inactive{
+        opacity: 0;;
+    }
+
+    &.active{
+       animation: contact-animation1 2.0s ease-in;
+    }
+
+    @keyframes contact-animation1 {
+        0% {
+            opacity: 0;
+        }
+        100%{
+            opacity: 1;
+        }
+    }
+}

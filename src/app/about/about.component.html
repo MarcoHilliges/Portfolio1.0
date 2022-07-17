@@ -1,12 +1,18 @@
 <section class="center" id="about">
     <div class="container-width">
         <div class="center-horizontal">
-            <div class="img-container">
+            <div class="img-container inactive"
+                 inViewport
+                 [inViewportOptions]="{ threshold: [0] }"
+                 (inViewportAction)="onIntersection($event)">
                 <img src="assets/img/Marco.png" alt="">
             </div>
             <div class="about-header-text">
                 <h2 class="center-horizontal">About me</h2>
-                <p>
+                <p class="inactive"
+                   inViewport
+                   [inViewportOptions]="{ threshold: [0] }"
+                   (inViewportAction)="onIntersection($event)">
                     #the imagination is the only limit.
                 </p>
             </div>

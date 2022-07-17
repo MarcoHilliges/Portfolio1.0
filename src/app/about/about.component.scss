@@ -5,6 +5,26 @@ section {
     background-color: #1a1a1a;
     width: 100%;
 
+    .img-container{
+
+        &.inactive{
+            transform: scale(0.1);
+        }
+    
+        &.active{
+           animation: about-animation1 0.5s linear;
+        }
+    
+        @keyframes about-animation1 {
+            0% {
+                transform: scale(0.1) translateX(-500px);
+            }
+            100%{
+                transform: scale(1);
+            }
+        }
+    }
+
     img{
         height: 300px;
         width: 300px;
@@ -16,6 +36,27 @@ section {
 
     .about-header-text{
         margin-left: 140px;
+
+        p{
+            transform: scale(0);
+
+            &.inactive{
+                transform: scale(0.1);
+            }
+        
+            &.active{
+               animation: about-animation2 0.5s linear 1s both;
+            }
+        
+            @keyframes about-animation2 {
+                0% {
+                    transform: scale(0) translateX(500px);
+                }
+                100%{
+                    transform: scale(1);
+                }
+            }
+        }
     }
 
     .about-content{
@@ -31,7 +72,24 @@ section {
             flex-direction: column;
             align-items: center;
             width: 250px;
-            
+            opacity: 0;
+
+            &.inactive{
+                transform: scale(0.1);
+            }
+        
+            &.active{
+               animation: about-animation3 2s linear both;
+            }
+        
+            @keyframes about-animation3 {
+                0% {
+                    opacity: 0;
+                }
+                100%{
+                    opacity: 1;
+                }
+            }
 
             .img-box{
                 height: 80px;

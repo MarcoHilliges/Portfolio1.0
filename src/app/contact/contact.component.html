@@ -9,7 +9,7 @@
               (submit)="sendMessage()"
               id="test">
 
-          <div class="inactive"
+          <div class="input-name inactive"
                inViewport
                [inViewportOptions]="{ threshold: [0] }"
                (inViewportAction)="onIntersection($event)">
@@ -29,7 +29,7 @@
             <input formControlName="name" name="name" type="text" placeholder=" Enter your name" required>
           </div>
 
-          <div class="inactive"
+          <div class="input-eMail inactive"
                inViewport
                [inViewportOptions]="{ threshold: [0] }"
                (inViewportAction)="onIntersection($event)">
@@ -50,7 +50,7 @@
             <input formControlName="emailAddress" name="eMailAddress" type="email" placeholder=" Enter your E-Mail address" required>
           </div>
           
-          <div class="inactive"
+          <div class="input-message inactive"
                inViewport
                [inViewportOptions]="{ threshold: [0] }"
                (inViewportAction)="onIntersection($event)">
