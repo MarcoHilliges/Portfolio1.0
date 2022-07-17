@@ -20,3 +20,17 @@ footer {
         }
     }
 }
+
+@media only screen and (max-width: 300px) {
+    footer{
+        nav{
+            a{
+                margin-left: 15px;
+            }
+        }
+    }
+    
+    
+
+    
+}

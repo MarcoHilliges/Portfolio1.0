@@ -8,7 +8,7 @@ header{
     justify-content: center;
     background-color: rgba(0, 0, 0, 0.925);
 
-    section{
+    .non-mobile-header{
         
         display: flex;
         justify-content: space-between;
@@ -28,6 +28,63 @@ header{
 
         &:hover{
             color: red;
+        }
+    }
+
+    .mobile-header{
+        display: none;
+        justify-content: flex-start;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        cursor: pointer;
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+    
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                flex-direction: column;
+                background-color: black;
+                min-width: 160px;
+                border: 1px solid white;
+                border-radius: 10px;
+                box-shadow: 0px 8px 16px 0px rgba(255, 255, 255, 0.2);
+                padding: 12px 16px;
+                z-index: 1;
+
+                a{
+                    margin-top: 10px;
+                    margin-bottom: 10px;
+                }
+            }
+    
+            &:hover .dropdown-content {
+                display: flex;
+            }
+          }
+    }     
+}
+
+@media only screen and (orientation: portrait) and (max-width: 650px) {
+    header{
+        .non-mobile-header{
+            display: none;
+        }
+        .mobile-header{
+            display: flex;
+        }
+    }
+}
+
+@media only screen and (orientation: landscape) and (max-width: 950px) {
+    header{
+        .non-mobile-header{
+            display: none;
+        }
+        .mobile-header{
+            display: flex;
         }
     }
 }

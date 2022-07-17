@@ -1,7 +1,7 @@
 section {
-    padding-top: 120px;
+    padding-top: 50px;
     padding-bottom: 120px;
-    height: calc(100vh - 120px);
+    min-height: calc(100vh - 120px);
     background-color: #1a1a1a;
     width: 100%;
 }
@@ -10,6 +10,8 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 800px;
+    max-width: 100%;
 
 }
 

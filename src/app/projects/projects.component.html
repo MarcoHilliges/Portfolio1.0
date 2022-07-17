@@ -2,7 +2,7 @@
     <div class="container-width center column">
         <h2>My work</h2>
 
-        <div class="flex">
+        <!-- <div class="flex">
             <div>
                 All
             </div>
@@ -12,17 +12,18 @@
             <div>
                 Java Script
             </div>
-        </div>
+        </div> -->
 
         <div class="center wrap">
             <div class="project-box inactive"
                  inViewport
                  [inViewportOptions]="{ threshold: [0] }"
                  (inViewportAction)="onIntersection($event)">
+                <img src="assets/img/el-pollo-loco.png" alt="">
                 <div class="project-box-overlay center column">
                     <h3>El Pollo Loco</h3>
-                    <p>JavaScript - based jump and run game</p>
-                    <div class="project-play-button center">Try out</div>
+                    <p>little jump and run game</p>
+                    <a href="https://elpolloloco.marcos-tech.de/" target="_blank" class="project-play-button center">Try out</a>
                 </div>
             </div>
 
@@ -30,10 +31,11 @@
                  inViewport
                  [inViewportOptions]="{ threshold: [0] }"
                  (inViewportAction)="onIntersection($event)">
+                <img src="assets/img/pokedex.png" alt="">
                 <div class="project-box-overlay center column">
                     <h3>Pokedex</h3>
-                    <p>JavaScript - based jump and run game</p>
-                    <div class="project-play-button center">Try out</div>
+                    <p>based on Rest API</p>
+                    <a href="https://pokedex.marcos-tech.de/" target="_blank" class="project-play-button center">Try out</a>
                 </div>
             </div>
 
@@ -41,10 +43,11 @@
                  inViewport
                  [inViewportOptions]="{ threshold: [0] }"
                  (inViewportAction)="onIntersection($event)">
+                <img src="assets/img/join.png" alt="">
                 <div class="project-box-overlay center column">
                     <h3>Join-Kanban-board</h3>
-                    <p>JavaScript - based jump and run game</p>
-                    <div class="project-play-button center">Try out</div>
+                    <p>Work-Management-Software</p>
+                    <a href="https://join.marcos-tech.de/" target="_blank" class="project-play-button center">Try out</a>
                 </div>
             </div>
 
@@ -52,10 +55,23 @@
                  inViewport
                  [inViewportOptions]="{ threshold: [0] }"
                  (inViewportAction)="onIntersection($event)">
+                 <img src="assets/img/sharkie.png" alt="">
                 <div class="project-box-overlay center column">
                     <h3>Sharki</h3>
-                    <p>JavaScript - based jump and run game</p>
-                    <div class="project-play-button center">Try out</div>
+                    <p>work in progress</p>
+                    <!-- <a href="https://join.marcos-tech.de/" target="_blank" class="project-play-button center">Try out</a> -->
+                </div>
+            </div>
+
+            <div class="project-box inactive"
+                 inViewport
+                 [inViewportOptions]="{ threshold: [0] }"
+                 (inViewportAction)="onIntersection($event)">
+                <img src="assets/img/tictactoe.png" alt="">
+                <div class="project-box-overlay center column">
+                    <h3>Tic Tac Toe</h3>
+                    <p>2 P. Mini-Game</p>
+                    <a href="https://tictactoe.marcos-tech.de/" target="_blank" class="project-play-button center">Try out</a>
                 </div>
             </div>
 

@@ -15,7 +15,7 @@ body{
 
 .container-width{
     width: 1680px;
-    max-width: 100vw;
+    max-width: 96vw;
 }
 
 .flex{
@@ -45,6 +45,7 @@ body{
 
 h1{
     font-size: 64px;
+    margin-top: 0;
 }
 
 h2{
@@ -63,3 +64,122 @@ h4{
 
 // html, body { height: 100%; }
 // body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+@media only screen and (max-width: 1200px) {
+    html{
+        font-size: 16px;
+    }
+    
+    h1 {
+        font-size: 50px;
+    }
+
+    h2{
+        font-size: 28px;
+        font-weight: 500;
+    }
+    
+    h3{
+        font-size: 16px;
+        font-weight: bold;
+    }
+    
+    h4{
+        font-size: 16px;
+    }
+}
+
+@media only screen and (orientation: landscape) and (max-width: 850px) {
+    html{
+        font-size: 16px;
+    }
+    
+    h1 {
+        font-size: 35px;
+    }
+
+    h2{
+        font-size: 20px;
+        font-weight: 500;
+    }
+    
+    h3{
+        font-size: 16px;
+        font-weight: bold;
+    }
+    
+    h4{
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    html{
+        font-size: 16px;
+    }
+    
+    h1 {
+        font-size: 35px;
+    }
+
+    h2{
+        font-size: 20px;
+        font-weight: 500;
+    }
+    
+    h3{
+        font-size: 16px;
+        font-weight: bold;
+    }
+    
+    h4{
+        font-size: 16px;
+    }
+}
+
+@media only screen and (orientation: landscape) and (max-width: 650px) {
+    html{
+        font-size: 16px;
+    }
+    
+    h1 {
+        font-size: 28px;
+    }
+
+    h2{
+        font-size: 19px;
+        font-weight: 500;
+    }
+    
+    h3{
+        font-size: 16px;
+        font-weight: bold;
+    }
+    
+    h4{
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    html{
+        font-size: 16px;
+    }
+    
+    h1 {
+        font-size: 28px;
+    }
+
+    h2{
+        font-size: 19px;
+        font-weight: 500;
+    }
+    
+    h3{
+        font-size: 16px;
+        font-weight: bold;
+    }
+    
+    h4{
+        font-size: 16px;
+    }
+}
