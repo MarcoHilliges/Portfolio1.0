@@ -15,6 +15,7 @@ section {
     background-color: gray;
     border-radius: 20px;
     overflow: hidden;
+    transform:scale(0) translateX(500px);
 
     img{
         width: 100%;
@@ -23,19 +24,22 @@ section {
     }
     
     &.inactive{
-        transform: scale(0.1);
+        transform: scale(0) translateX(500px);
+        opacity: 0;
     }
 
     &.active{
-       animation: projects-animation 0.5s linear;
+       animation: projects-animation 1s ease-in both;
     }
 
     @keyframes projects-animation {
         0% {
-            transform: scale(0.1) rotate(180deg);
+            transform: scale(0) translateX(500px);
+            opacity: 0;
         }
         100%{
             transform: scale(1);
+            opacity: 1;
         }
     }
 

@@ -16,17 +16,24 @@ section {
         object-position: 60% 30%;
         background-color: #fa2759;
         border-radius: 50%;
-
-        transition: all 1.5s ease-in-out 1s;
+        transform: scale(0) translateX(500px);
+        
 
         &.inactive{
-            background-color: transparent;
-            transform: scale(0.1);
-            opacity: 0;
+            transform: scale(0) translateX(500px);
         }
     
         &.active{
-            
+            animation: welcome-animation1 2.5s ease-in-out 2s both;
+        }
+
+        @keyframes welcome-animation1 {
+            0% {
+                transform: scale(0) translateX(500px);
+            }
+            100%{
+                transform: scale(1);
+            }
         }
     }
 }
