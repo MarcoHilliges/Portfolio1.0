@@ -5,9 +5,10 @@
             <a href="mailto:marco.hilliges@gmx.de">marco.hilliges@gmx.de</a> 
         </span>
 
-        <form [formGroup]="contactFormFB" 
-              (submit)="sendMessage()"
-              id="test">
+        <form #form action="https://marcos-tech.de/sendMail/send_mail.php" 
+              method="post"
+              [formGroup]="contactFormFB" 
+              >
 
           <div class="input-name inactive"
                inViewport
@@ -75,7 +76,7 @@
                inViewport
                [inViewportOptions]="{ threshold: [0] }"
                (inViewportAction)="onIntersection($event)">
-            <button [disabled]="!(contactFormFB.valid  && (contactFormFB.dirty || contactFormFB.touched))" type="submit">Send</button>
+            <button [disabled]="!(contactFormFB.valid  && (contactFormFB.dirty || contactFormFB.touched))" type="submit" (click)="form.submit()">Send</button>
           </div>
           
 

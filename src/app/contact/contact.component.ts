@@ -28,7 +28,7 @@ export class ContactComponent implements OnInit {
       ], []],
     })
 
-    this.contactFormFB.valueChanges.subscribe(console.log)
+    // this.contactFormFB.valueChanges.subscribe(console.log)
   }
 
   ngOnInit(): void {
